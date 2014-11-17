@@ -1,0 +1,30 @@
+<div ng-controller="firstCtrl">
+
+	<div class="container">
+		<div class="sixteen columns">
+			<h1>Paso 1:</h1>
+			<h2>Informacion de pelicula</h2>
+		</div>
+		<div class="eight columns">
+			<input ng-model="movie.name" class="movieInput" type="text" placeholder="Nombre de pelicula">
+			<input ng-model="movie.synopsis" class="movieInput" type="text" placeholder="Sinopsis de pelicula">
+		</div>
+	</div>
+
+	<div id="imageContainer" class="container">
+		<div class="sixteen columns">
+			<form>
+				<input type='file' id="asd" />
+				<br>
+				<img id="img" src="//placehold.it/1x1/" />
+				<div id="base" class="sixteen columns"></div>
+			</form>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="four columns">
+			<button ng-click="saveMovie()" type="submit"> Guardar </button>
+		</div>
+	</div>
+</div>

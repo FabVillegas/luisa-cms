@@ -1,0 +1,19 @@
+{
+  "name": "luisa-cms",
+  "description": "Netflix y luisa se unen. Este es el CMS para que Luisa pueda subir su contenido.",
+  "author": "Fabritzio Villegas",
+  "contributors": {},
+  "version": "0.1.0",
+  "dependencies": {
+    "angular": "~1.3.2",
+    "angularfire": "~0.8.2",
+    "angular-ui-router": "~0.2.11",
+    "angular-slick": "~0.1.11",
+    "firebase": "~2.0.2",
+    "angularjs": "~1.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/FabVillegas/luisa-cms"
+  }
+}
