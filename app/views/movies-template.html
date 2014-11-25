@@ -1,0 +1,39 @@
+<div ng-controller="moviesCtrl">
+  <div class="container">
+    <div class="sixteen columns">
+        <button ng-click="goCaptura()">Ir a captura</button>
+    </div>
+    <div class="four columns">
+      <p>Elegir categoría</p>
+      <select ng-model="category" ng-change="getData()" class="movieInput">
+        <option>Accion</option>
+        <option>Aventura</option>
+        <option>Fantasia</option>
+        <option>Romance</option>
+        <option>Comedia</option>
+        <option>Animacion</option>
+        <option>Thriller</option>
+        <option>Drama</option>
+        <option>Familia</option>
+        <option>Crimen</option>
+        <option>Ciencia Ficcion</option>
+      </select>
+    </div>
+    <div id="moviesTable" ng-show="isShown" class="sixteen columns">
+      <table>
+        <tr>
+          <th>Title</th>
+          <th>Relase Year</th>
+          <th>Rating</th>
+          <th>Description</th>
+        </tr>
+        <tr ng-repeat="movie in moviesArray" >
+          <td><input ng-model="movie.title" ng-change="moviesArray.$save(movie)"></td>
+          <td><input ng-model="movie.releaseYear" ng-change="moviesArray.$save(movie)"></td>
+          <td><input ng-model="movie.rating" ng-change="moviesArray.$save(movie)"></td>
+          <td><input ng-model="movie.description" ng-change="moviesArray.$save(movie)"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

@@ -4,6 +4,10 @@ firstCtrl.$inject = ['$scope', '$state', '$firebase'];
 
 function firstCtrl($scope, $state, $firebase){
 
+  $scope.goMovies = function(){
+    $state.go('movies');
+  };
+
   // Movie Constructor
   $scope.movie = {
     title : '',
@@ -36,5 +40,12 @@ function firstCtrl($scope, $state, $firebase){
   $scope.saveMovie = function(){
     var saveRef = $firebase(new Firebase('https://cms-luisa.firebaseio.com/peliculas/' + $scope.category));
     saveRef.$push($scope.movie);
+    $scope.movie = {
+      title : '',
+      releaseYear : '',
+      rating : '',
+      description : '',
+      image : ''
+    }
   };
 };

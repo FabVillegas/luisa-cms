@@ -5,6 +5,11 @@ angular.module('proyectoLuisa', ['ui.router', 'firebase']).config(['$stateProvid
 		url: '/first',
 		templateUrl: 'views/firstTemplate.html',
 		controller: 'firstCtrl'
+	}).
+	state('movies', {
+		url: '/movies',
+		templateUrl: 'views/movies-template.html',
+		controller: 'moviesCtrl'
 	});
 }]);
 

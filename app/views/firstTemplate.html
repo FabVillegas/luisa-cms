@@ -1,6 +1,9 @@
 <div ng-controller="firstCtrl">
 
 	<div class="container">
+		<div class="eight columns">
+			<button ng-click="goMovies()">Ver lista de películas</button>
+		</div>
 		<div class="sixteen columns">
 			<h1>Información de película</h1>
 		</div>
@@ -9,8 +12,21 @@
 			<input ng-model="movie.releaseYear" class="movieInput" type="text" placeholder="Año">
 			<input ng-model="movie.rating" class="movieInput" type="text" placeholder="Rating de pelicula">
 			<input ng-model="movie.description" class="movieInput" type="text" placeholder="Descripción de pelicula">
-			<input ng-model="category" class="movieInput" type="text" placeholder="Categoría en cual colocar la pelicula">
+			<select ng-model="category" class="movieInput">
+				<option>Accion</option>
+				<option>Aventura</option>
+				<option>Fantasia</option>
+				<option>Romance</option>
+				<option>Comedia</option>
+				<option>Animacion</option>
+				<option>Thriller</option>
+				<option>Drama</option>
+				<option>Familia</option>
+				<option>Crimen</option>
+				<option>Ciencia Ficcion</option>
+			</select>
 		</div>
+
 	</div>
 
 	<div id="imageContainer" class="container">
