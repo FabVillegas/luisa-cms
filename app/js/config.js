@@ -5,11 +5,6 @@ angular.module('proyectoLuisa', ['ui.router', 'firebase']).config(['$stateProvid
 		url: '/first',
 		templateUrl: 'views/firstTemplate.html',
 		controller: 'firstCtrl'
-	}).
-	state('second', {
-		url: '/second',
-		templateUrl: 'views/secondTemplate.html',
-		controller: 'secondCtrl'
 	});
 }]);
 

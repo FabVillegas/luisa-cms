@@ -6,10 +6,14 @@ function firstCtrl($scope, $state, $firebase){
 
   // Movie Constructor
   $scope.movie = {
-    name: '',
-    synopsis: '',
-    image: ''
+    title : '',
+    releaseYear : '',
+    rating : '',
+    description : '',
+    image : ''
   }
+
+  $scope.category = '';
 
   // convert image to base64
   function el(id){
@@ -30,8 +34,7 @@ function firstCtrl($scope, $state, $firebase){
 
   // ng-click methods
   $scope.saveMovie = function(){
-    console.log($scope.movie);
-    var saveRef = $firebase(new Firebase('https://cms-luisa.firebaseio.com/peliculas'));
+    var saveRef = $firebase(new Firebase('https://cms-luisa.firebaseio.com/peliculas/' + $scope.category));
     saveRef.$push($scope.movie);
   };
 };
